@@ -1,0 +1,21 @@
+<div class="container">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink routerLink="/listeart" routerLinkActive="menu-actif">Liste article</a>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink routerLink="/ajout" routerLinkActive="menu-actif">Ajouter article</a>
+    </li>
+    <li [ngbNavItem]="3">
+      <a ngbNavLink routerLink="/apropos" routerLinkActive="menu-actif">A propos</a>
+    </li>
+  </ul>
+
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+</div>

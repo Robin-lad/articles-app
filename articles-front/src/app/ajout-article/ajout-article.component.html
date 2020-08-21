@@ -1,0 +1,14 @@
+<form>
+  <div class="form-group">
+    <label for="exampleInputlibelle">Libelle de l'article</label>
+    <input type="text" class="form-control" id="exampleInputlibelle" placeholder="Entrer libelle" #libelle>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPrix">Prix de l'article</label>
+    <input type="text" class="form-control" id="exampleInputPrix" placeholder="Entrer un prix" #prix>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="ajouterArticle(libelle, prix);">Ajouter</button>
+  <div *ngIf="ajoutFait" class="alert alert-success" role="alert">
+    Ajout bien effectué !
+  </div>
+</form>
