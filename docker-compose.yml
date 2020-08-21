@@ -3,7 +3,7 @@ version: "3.8"
 services:
     articles-bdd:
         build: ./articles-db
-        image: articles-bdd:v1
+        image: articles-bdd:robin-v1
         container_name: articles-bdd
         networks:
             - articles-network
@@ -12,7 +12,7 @@ services:
     
     articles-back:
         build: ./articles-back
-        image: articles-back:v1
+        image: articles-back:robin-v1
         container_name: articles-back
         ports:
             - "8081:8080"
@@ -23,7 +23,7 @@ services:
             
     articles-front:
         build: ./articles-front
-        image: articles-front:v3
+        image: articles-front:robin-v1
         container_name: articles-front
         depends_on:
             - articles-back
